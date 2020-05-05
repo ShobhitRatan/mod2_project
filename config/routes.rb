@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :tool_orders
+  resources :plant_orders
   resources :orders
   resources :locations
   resources :users, only: [:new, :create, :show, :delete]

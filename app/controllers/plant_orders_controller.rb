@@ -1,0 +1,2 @@
+class PlantOrdersController < ApplicationController
+end

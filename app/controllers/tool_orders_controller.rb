@@ -1,0 +1,2 @@
+class ToolOrdersController < ApplicationController
+end

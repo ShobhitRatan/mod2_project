@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_141417) do
+ActiveRecord::Schema.define(version: 2020_05_05_154415) do
 
   create_table "locations", force: :cascade do |t|
     t.string "country"
@@ -19,6 +19,28 @@ ActiveRecord::Schema.define(version: 2020_05_05_141417) do
     t.string "street"
     t.string "apartment"
     t.integer "zipcode"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.datetime "date"
+    t.datetime "arrival_estimate"
+    t.integer "location_id"
+    t.integer "user_id"
+    t.float "total_price"
+    t.float "tax"
+    t.float "shipping_fee"
+    t.float "weight"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "plant_orders", force: :cascade do |t|
+    t.integer "plant_id"
+    t.integer "order_id"
+    t.float "weight"
+    t.float "line_total"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "plants", force: :cascade do |t|
@@ -32,6 +54,15 @@ ActiveRecord::Schema.define(version: 2020_05_05_141417) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "weight"
+  end
+
+  create_table "tool_orders", force: :cascade do |t|
+    t.integer "tool_id"
+    t.integer "order_id"
+    t.float "weight"
+    t.float "line_total"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tools", force: :cascade do |t|

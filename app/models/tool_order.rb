@@ -1,0 +1,2 @@
+class ToolOrder < ApplicationRecord
+end
