@@ -1,0 +1,21 @@
+<%= form_for @tool_order do |f| %> 
+    <div class="field"> 
+        <%= f.label :tool_id %> 
+        <%= f.collection_select :tool_id, @tools, :id, :name %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :order_id %> 
+        <%= f.collection_select :order_id, @orders, :id, :date %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :weight %> 
+        <%= f.number_field :weight %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :line_total %> 
+        <%= f.number_field :line_total %> 
+    </div> 
+    <div class="actions"> 
+        <%= f.submit %> 
+    </div>
+<% end %>  
