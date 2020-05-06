@@ -1,1 +1,4 @@
 <h1>Tools</h1>
+<% @tools.each do |t| %>
+   <div> <%= link_to t.name, tool_path(t) %></div>
+    <% end %>
