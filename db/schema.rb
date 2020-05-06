@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_162022) do
 
   create_table "locations", force: :cascade do |t|
     t.string "country"
