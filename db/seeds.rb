@@ -18,20 +18,20 @@ Tool.destroy_all
 User.create(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: Faker::IDNumber.valid)   
 end 
 
-def add_plant(id)
-api_beginning = "https://trefle.io/api/plants/"
-api_end = "/?token="
-my_key = ENV["APIKEY"]
-plant_info = JSON.parse(RestClient.get("#{api_beginning}#{id}#{api_end}#{my_key}"))
-plant["#{nickname}"] = Plant.create(nickname: nickname,
-                common_name: JSON.parse(RestClient.get("#{api_beginning}#{id}#{api_end}#{my_key}&common_name=#{common_name}"))["common_name"],
-                scientific_name: plant_info["scientific_name"],
-                temperature_minimum: plant_info["main_species"]["growth"]["temperature_minimum"]["deg_f"],
-                percipitation_minimum: plant_info["main_species"]["growth"]["precipitation_minimum"]["cm"],
-                percipitation_maximum: plant_info["main_species"]["growth"]["precipitation_maximum"]["cm"],
-                moisture_use: plant_info["main_species"]["growth"]["moisture_use"],
-                serial: id)
-end
+# def add_plant(id)
+# api_beginning = "https://trefle.io/api/plants/"
+# api_end = "/?token="
+# my_key = ENV["APIKEY"]
+# plant_info = JSON.parse(RestClient.get("#{api_beginning}#{id}#{api_end}#{my_key}"))
+# plant["#{nickname}"] = Plant.create(nickname: nickname,
+#                 common_name: JSON.parse(RestClient.get("#{api_beginning}#{id}#{api_end}#{my_key}&common_name=#{common_name}"))["common_name"],
+#                 scientific_name: plant_info["scientific_name"],
+#                 temperature_minimum: plant_info["main_species"]["growth"]["temperature_minimum"]["deg_f"],
+#                 percipitation_minimum: plant_info["main_species"]["growth"]["precipitation_minimum"]["cm"],
+#                 percipitation_maximum: plant_info["main_species"]["growth"]["precipitation_maximum"]["cm"],
+#                 moisture_use: plant_info["main_species"]["growth"]["moisture_use"],
+#                 serial: id)
+# end
 
 shovel = Tool.create(name: "shovel", description: "Used for digging", weight:5)
 plow = Tool.create(name: "plow", description: "Used to soil", weight: 7)

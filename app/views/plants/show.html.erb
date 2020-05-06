@@ -1,5 +1,10 @@
-<h1> Plant </h1>
-<%@plants.each do |p|%>
-    <p><%=link_to p.common_name, plant_path(p)%></p>
-    <%end%>
+<h1> @plant.common_name </h1>
+<h2> @plant.scientific_name </h2>
+<div>@plant.temperature_minimum</div>
+<div>@plant.temperature_maximum</div>
+<div>@plant.precipitation_minimum</div>
+<div>@plant.moisture_use</div>
+<div>@plant.serial/div>
+<div>@plant.weight/div>
+
     
