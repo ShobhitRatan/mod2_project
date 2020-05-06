@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_214541) do
 
   create_table "locations", force: :cascade do |t|
     t.string "country"
@@ -32,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_05_05_214541) do
     t.float "weight"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "order_status"
   end
 
   create_table "plant_orders", force: :cascade do |t|
