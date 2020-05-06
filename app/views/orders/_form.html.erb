@@ -1,0 +1,41 @@
+<%= form_for @order do |f| %> 
+    <div class="field"> 
+        <%= f.label :date %> 
+        <%= f.date_field :date %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :arrival_estimate %> 
+        <%= f.date_field :arrival_estimate %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :location_id %> 
+        <%= f.collection_select :location_id, @locations, :id, :city %>  
+    </div> 
+    <div class="field"> 
+        <%= f.label :user_id %> 
+        <%= f.collection_select :user_id, @users, :id, :name %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :total_price %> 
+        <%= f.number_field :total_price %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :tax %> 
+        <%= f.number_field :tax %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :shipping_fee %> 
+        <%= f.number_field :shipping_fee %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :weight %> 
+        <%= f.number_field :weight %> 
+    </div> 
+    <div class="field"> 
+        <%= f.label :order_status %> 
+        <%= f.boolean_field :order_status %> 
+    </div> 
+    <div class="actions"> 
+        <%= f.submit %> 
+    </div> 
+<% end %> 
