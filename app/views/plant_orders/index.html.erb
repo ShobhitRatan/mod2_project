@@ -1,0 +1,31 @@
+<h1>Plant Orders</h1> 
+
+<div><%= link_to 'Create Plant Order', new_plant_order_path %></div> 
+<br /> 
+
+<table>
+    <thead>
+        <tr>
+            <th>Plant</th> 
+            <th>Order</th> 
+            <th>Weight</th> 
+            <th>Line Total</th> 
+            <th></th> 
+        </tr> 
+    </thead> 
+    <tbody> 
+        <% @tool_orders.each do |tool_order| %> 
+            <tr> 
+                <td><%= tool_order.tools.name %></td>
+                <td><%= tool_order.orders.date %></td> 
+                <td><%= tool_order.weight %></td> 
+                <td><%= tool_order.line_total %></td>  
+                <td> 
+                    <%= link_to 'View', tool_order %> |
+                    <%= link_to 'Edit', edit_tool_order_path(tool_order) %> |
+                    <%= link_to 'Delete', tool_order, method: :delete, data: { confirm: 'Are you sure you want to delete this Tool Order?' }%> 
+                </td>
+            </tr>
+        <% end %> 
+    </tbody>
+</table> 
