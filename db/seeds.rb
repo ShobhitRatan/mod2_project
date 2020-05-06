@@ -33,6 +33,7 @@ end
 #                 serial: id)
 # end
 
+
 shovel = Tool.create(name: "shovel", description: "Used for digging", weight:5)
 plow = Tool.create(name: "plow", description: "Used to soil", weight: 7)
 hoe = Tool.create(name: "hoe", description: "Used to till the soil", weight: 5)
