@@ -1,0 +1,4 @@
+<h1>My Locations</h1>
+<%@user.locations each do |p|%>
+    <p>link_to <%=p.street%>, <%=p.city%>, <%=p.state%>, <%=p.country%>, <%=p.zipcode%>, location_path</p>
+    <%end%>
