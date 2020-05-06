@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_05_06_141536) do
   create_table "plants", force: :cascade do |t|
     t.string "common_name"
     t.string "scientific_name"
-    t.float "temperature_maximum"
+    t.float "precipitation_maximum"
     t.float "temperature_minimum"
     t.float "precipitation_minimum"
     t.string "moisture_use"

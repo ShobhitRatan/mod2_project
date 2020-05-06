@@ -18,28 +18,51 @@ Tool.destroy_all
 User.create(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: Faker::IDNumber.valid)   
 end 
 
-# def add_plant(id)
-# api_beginning = "https://trefle.io/api/plants/"
-# api_end = "/?token="
-# my_key = ENV["APIKEY"]
-# plant_info = JSON.parse(RestClient.get("#{api_beginning}#{id}#{api_end}#{my_key}"))
-# plant["#{nickname}"] = Plant.create(nickname: nickname,
-#                 common_name: JSON.parse(RestClient.get("#{api_beginning}#{id}#{api_end}#{my_key}&common_name=#{common_name}"))["common_name"],
-#                 scientific_name: plant_info["scientific_name"],
-#                 temperature_minimum: plant_info["main_species"]["growth"]["temperature_minimum"]["deg_f"],
-#                 percipitation_minimum: plant_info["main_species"]["growth"]["precipitation_minimum"]["cm"],
-#                 percipitation_maximum: plant_info["main_species"]["growth"]["precipitation_maximum"]["cm"],
-#                 moisture_use: plant_info["main_species"]["growth"]["moisture_use"],
-#                 serial: id)
-# end
 
 
-shovel = Tool.create(name: "shovel", description: "Used for digging", weight:5)
-plow = Tool.create(name: "plow", description: "Used to soil", weight: 7)
+shovel = Tool.create(name: "shovel", description: "Used for digging", weight:5, price: "$67")
+plow = Tool.create(name: "plow", description: "Used to soil", weight: 7, price: "$90")
 hoe = Tool.create(name: "hoe", description: "Used to till the soil", weight: 5)
-watering_can = Tool.create(name: "watering can", description: "Used to water plants evenly", weight: 1)
-hose = Tool.create(name: "hose", description: "used to water plants", weight: 2)
-stake = TOol.create(name: "stake", description: "used for aid in vertical growth", weight: 1)
+watering_can = Tool.create(name: "watering can", description: "Used to water plants evenly", weight: 1, price: "$16")
+hose = Tool.create(name: "hose", description: "used to water plants", weight: 2, price: "$19")
+stake = Tool.create(name: "stake", description: "used for aid in vertical growth", weight: 1, price: "$11")
+
+
+
+
+
+plant1 = Plant.create(common_name: "pineapple",
+scientific_name: "pineapple sci",
+temperature_minimum: 68.0,
+precipitation_maximum: 6.9,
+precipitation_minimum: 1.8,
+moisture_use: "Medium",
+serial_id: 104800,
+weight: 4,
+price: 29.7)
+
+plant2 = Plant.create(common_name: "golden bamboo",
+scientific_name: "golden bamboo sci",
+temperature_minimum: 50.0,
+precipitation_maximum: 3.9,
+precipitation_minimum: 2.8,
+moisture_use: "Low",
+serial_id: 133482,
+weight: 2,
+price: 19.7)
+
+plant3 = Plant.create(common_name: "weeping willow",
+scientific_name: "weeping willow sci",
+temperature_minimum: 48.0,
+precipitation_maximum: 9.9,
+precipitation_minimum: 7.8,
+moisture_use: "High",
+serial_id: 133202,
+weight: 92,
+price: 903.7)
+
+Plant.create_plant(104800)
+
 
 
 
