@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_06_135928) do
+ActiveRecord::Schema.define(version: 2020_05_06_141536) do
 
   create_table "locations", force: :cascade do |t|
     t.string "country"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_05_06_135928) do
     t.string "street"
     t.string "apartment"
     t.integer "zipcode"
+    t.string "name"
   end
 
   create_table "orders", force: :cascade do |t|
