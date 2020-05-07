@@ -1,7 +1,7 @@
 class LocationsController < ApplicationController
     def index 
-        @locations = User.find(name: @user.name)
-        #I actually want all the locations this user has
+        @user = User.find(params[:id])
+        @locations = @user.locations
     end 
 
     def show 
