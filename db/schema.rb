@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_162022) do
+ActiveRecord::Schema.define(version: 2020_05_07_150403) do
 
   create_table "locations", force: :cascade do |t|
     t.string "country"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_05_05_162022) do
     t.string "street"
     t.string "apartment"
     t.integer "zipcode"
+    t.string "name"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -47,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_05_05_162022) do
   create_table "plants", force: :cascade do |t|
     t.string "common_name"
     t.string "scientific_name"
-    t.float "temperature_maximum"
+    t.float "precipitation_maximum"
     t.float "temperature_minimum"
     t.float "precipitation_minimum"
     t.string "moisture_use"
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(version: 2020_05_05_162022) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "weight"
+    t.float "price"
   end
 
   create_table "tool_orders", force: :cascade do |t|
@@ -70,14 +72,15 @@ ActiveRecord::Schema.define(version: 2020_05_05_162022) do
     t.string "name"
     t.string "description"
     t.integer "weight"
+    t.float "price"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "password"
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
 end
