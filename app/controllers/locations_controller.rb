@@ -5,11 +5,13 @@ class LocationsController < ApplicationController
     end 
 
     def show 
-        @location = Location.find(params[:id])
+        @location = Location.find_by(params[:id])
     end
 
     def new 
         @location = Location.new
+        @users = [] 
+        @users << current_user 
     end 
 
     def create 
@@ -19,6 +21,6 @@ class LocationsController < ApplicationController
 
     private 
     def location_params 
-        params.require(:location).permit(:state, :city, :country, :street, :zipcode, :apartment)
+        params.require(:location).permit(:name, :state, :city, :country, :street, :zipcode, :apartment, :user_id)
     end
 end

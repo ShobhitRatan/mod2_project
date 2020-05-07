@@ -11,6 +11,14 @@
         <%= f.label :user_id %> 
         <%= f.collection_select :user_id, @users, :id, :name %> 
     </div> 
+    <div class="field"> 
+        <%= f.label :plant_id %> 
+        <%= f.collection_select :plant_id, @plants, :id, :common_name %>  
+    </div> 
+    <div class="field"> 
+        <%= f.label :tool_id %> 
+        <%= f.collection_select :tool_id, @tools, :id, :name %> 
+    </div> 
     <div class="actions"> 
         <%= f.submit %> 
     </div> 

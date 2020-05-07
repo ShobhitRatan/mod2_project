@@ -3,29 +3,10 @@
 
     <h3><%= @order.date %></h3> 
 
-    <h3><%= @order.arrival_estimate %></h3> 
+    <h3><%= @order.location.name %></h3>
 
-    <h3><%= @order.location.appartment, @order.location.street, @order.location.city, @order.location.state, @order.location.zipcode, @order.location.country%></h3> 
+    <h3><%= @order.plant.common_name %></h3>  
 
-    <h3><%= @order.user.name %></h3> 
-
-    <h3><%= @order.total_price %> 
-
-    <h3><%= @order.tax %> 
-
-    <h3><%= @order.shipping_fee %></h3>
-
-    <h3><%= @order.weight %></h3> 
-
-    <h3><%= @order.order_status %></h3> 
-
-    <% @order.plants.uniq.each do |plant| %> 
-        <p><%= link_to plant.name, plant_path(plant) %></p> 
-    <% end %> 
-
-    <% @order.tools.uniq.each do |tool| %> 
-        <p><%= link_to tool.name, tool_path(tool) %></p> 
-    <% end %> 
-
-    <h2><%= button_to "Back", users_path, method: :get %></h2> 
+    <h3><%= @order.tool.name %></h3> 
+    <h2><%= button_to "Back", orders_path, method: :get %></h2> 
 </div>
