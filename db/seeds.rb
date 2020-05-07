@@ -61,17 +61,18 @@ serial_id: 133202,
 weight: 92,
 price: 903.7)
 
-plant4 = Plant.create(common_name: "weeping willow",
-scientific_name: "weeping willow sci",
-temperature_minimum: 48.0,
-precipitation_maximum: 9.9,
-precipitation_minimum: 7.8,
-moisture_use: "High",
-serial_id: 133202,
-weight: 92,
-price: 903.7)
+plant4 = Plant.create(common_name: "monstera",
+scientific_name: "monstera deliciosa",
+temperature_minimum: 68.0,
+precipitation_maximum: 5.9,
+precipitation_minimum: 4.8,
+moisture_use: "Medium",
+serial_id: 133208,
+weight: 9,
+price: 19.7)
 
-Plant.create_plant(104800)
+
+
 
 
 
