@@ -15,7 +15,7 @@ Plant.destroy_all
 Tool.destroy_all
 
 15.times do 
-User.create(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password_digest: Faker::IDNumber.valid)   
+User.create(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: Faker::IDNumber.valid)   
 end 
 
 
