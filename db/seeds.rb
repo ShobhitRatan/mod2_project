@@ -71,7 +71,7 @@ serial_id: 133202,
 weight: 92,
 price: 903.7)
 
-Plant.create_plant(104800)
+#Plant.create_plant(104800)
 
 
 
