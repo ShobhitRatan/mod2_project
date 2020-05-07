@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
     def index 
-        @user = User.find(params[:id])
+        @user = current_user
         @locations = @user.locations
     end 
 

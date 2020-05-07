@@ -8,9 +8,11 @@ class OrdersController < ApplicationController
     end 
 
     def new 
-        @order = Order.new 
         @locations = Location.all 
         @users = User.all 
+        @plants = Plant.all 
+        @tools = Tool.all
+        @order = Order.new 
     end 
 
     def create 

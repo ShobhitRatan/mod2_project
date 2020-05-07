@@ -4,10 +4,6 @@
         <%= f.date_field :date %> 
     </div> 
     <div class="field"> 
-        <%= f.label :arrival_estimate %> 
-        <%= f.date_field :arrival_estimate %> 
-    </div> 
-    <div class="field"> 
         <%= f.label :location_id %> 
         <%= f.collection_select :location_id, @locations, :id, :city %>  
     </div> 

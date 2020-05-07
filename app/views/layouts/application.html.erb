@@ -11,14 +11,16 @@
 
   <body>
   <header>
+  <a href="https://localhost:3000/">
   <img class ="logo" src="images/logo.svg" alt="logo">
+  </a>
     <nav>
       <ul class="nav__links">
         <li><%=link_to "Plants", plants_path%></li>
         <li><%=link_to "Tools", tools_path%></li>
         <li><%=link_to "Locations", locations_path%></li>
       </ul>
-      <button id="Order Button" onclick="link(<a =href"https://localhost:3000/orders"></a>Cart</button>
+      <%=button_to "Cart", orders_path, method: :get%>
     </nav>
   </header>
     <%= yield %>
