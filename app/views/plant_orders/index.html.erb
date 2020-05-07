@@ -8,9 +8,8 @@
         <tr>
             <th>Plant</th> 
             <th>Order</th> 
-            <th>Weight</th> 
             <th>Line Total</th> 
-            <th></th> 
+            <th>Quantity</th> 
         </tr> 
     </thead> 
     <tbody> 
@@ -18,8 +17,8 @@
             <tr> 
                 <td><%= plant_order.plants.name %></td>
                 <td><%= plant_order.orders.date %></td> 
-                <td><%= plant_order.weight %></td> 
                 <td><%= plant_order.line_total %></td>  
+                <td><%= plant_order.quantity %></td>  
                 <td> 
                     <%= link_to 'View', plant_order %> |
                     <%= link_to 'Edit', edit_plant_order_path(plant_order) %> |

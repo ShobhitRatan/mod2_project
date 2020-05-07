@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_06_161637) do
+ActiveRecord::Schema.define(version: 2020_05_07_152106) do
 
   create_table "locations", force: :cascade do |t|
     t.string "country"
@@ -39,10 +39,10 @@ ActiveRecord::Schema.define(version: 2020_05_06_161637) do
   create_table "plant_orders", force: :cascade do |t|
     t.integer "plant_id"
     t.integer "order_id"
-    t.float "weight"
     t.float "line_total"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "quantity"
   end
 
   create_table "plants", force: :cascade do |t|
@@ -62,10 +62,11 @@ ActiveRecord::Schema.define(version: 2020_05_06_161637) do
   create_table "tool_orders", force: :cascade do |t|
     t.integer "tool_id"
     t.integer "order_id"
-    t.float "weight"
     t.float "line_total"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "quanitity"
+    t.integer "quantity"
   end
 
   create_table "tools", force: :cascade do |t|

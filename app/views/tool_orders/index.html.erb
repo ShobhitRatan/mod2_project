@@ -10,6 +10,7 @@
             <th>Order</th> 
             <th>Weight</th> 
             <th>Line Total</th> 
+            <th>Quantity</th>
             <th></th> 
         </tr> 
     </thead> 
@@ -20,6 +21,7 @@
                 <td><%= tool_order.orders.date %></td> 
                 <td><%= tool_order.weight %></td> 
                 <td><%= tool_order.line_total %></td>  
+                <td><%= tool_order.quantity %></td>
                 <td> 
                     <%= link_to 'View', tool_order %> |
                     <%= link_to 'Edit', edit_tool_order_path(tool_order) %> |
