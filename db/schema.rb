@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_06_141536) do
+ActiveRecord::Schema.define(version: 2020_05_06_161637) do
 
   create_table "locations", force: :cascade do |t|
     t.string "country"
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_05_06_141536) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "weight"
-    t.string "price"
+    t.float "price"
   end
 
   create_table "tool_orders", force: :cascade do |t|
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 2020_05_06_141536) do
     t.string "name"
     t.string "description"
     t.integer "weight"
-    t.string "price"
+    t.float "price"
   end
 
   create_table "users", force: :cascade do |t|

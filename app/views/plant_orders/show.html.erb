@@ -1,0 +1,13 @@
+<div class="container"> 
+    <h1>Show Page</h1> 
+
+    <h3><%= @plant_order.plants.name %></h3> 
+
+    <h3><%= @plant_order.orders.date %></h3> 
+
+    <h3><%= @plant_order.weight %></h3> 
+
+    <h3><%= @plant_order.line_total %></h3> 
+
+    <h2><%= button_to "Back", plant_orders, method: :get %></h2> 
+</div> 
