@@ -1,0 +1,11 @@
+<h1>@location.name</h1>
+<h3><%=@location.country%></h3>
+<h3><%=@location.city%></h3>
+<h3><%=@location.street%></h3>
+<h3><%=@location.apartment%></h3>
+<h3><%=@location.zipcode%></h3>
+<%= button_to 'Delete', locations_path, method: :delete, data: { confirm: 'Are you sure you want to delete this location?' } %> 
+
+<%= button_to 'Edit', edit_location_path, method: :get %>
+<%= button_to 'Back', locations_path, method: :get %>
+
