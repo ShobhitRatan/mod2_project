@@ -71,6 +71,24 @@ serial: 133208,
 weight: 9,
 price: 19.7)
 
+plant5 = Plant.create(common_name: "seagrape",
+scientific_name: "monstera deliciosa",
+temperature_minimum: 68.0,
+precipitation_maximum: 5.9,
+precipitation_minimum: 4.8,
+moisture_use: "Medium",
+serial: 133208,
+weight: 9,
+price: 19.7)
+
+
+plant6 = Plant.create_plant(173194)
+plant7 = Plant.create_plant(117145)
+plant8 = Plant.create_plant(122200)
+plant9 = Plant.create_plant(124608)
+
+
+
 
 
 
