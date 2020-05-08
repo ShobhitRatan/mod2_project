@@ -5,7 +5,8 @@
     <h3><%=@locations.city%></h3>
     <h3><%=@locations.state%></h3> 
     <h3><%=@locations.zipcode%></h3>
-    <h3><%=@locations.country%></h3>
+    <h3><%=@locations.country%></h3> 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12086.416838998393!2d-73.57706865!3d40.770729100000004!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1463123119788" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     <%= button_to 'Delete', locations_path, method: :delete, data: { confirm: 'Are you sure you want to delete this location?' } %> 
 
     <%= button_to 'Edit', edit_location_path, method: :get %>
