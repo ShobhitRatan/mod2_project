@@ -4,7 +4,11 @@ class UsersController < ApplicationController
     end 
     
     def show 
-        @user = User.find(params[:id])
+        if @user = (User.find_by(id: session[:user_id])
+            render user_path(@user)
+        else 
+            redirect_to plants_path
+        end
     end
 
     def new 
