@@ -1,12 +1,12 @@
 
 <h1> <%=@plant.common_name%> </h1>
 <h2> <%=@plant.scientific_name%> </h2>
-<div><%=@plant.temperature_minimum%></div>
-<div><%=@plant.precipitation_maximum%></div>
-<div><%=@plant.precipitation_minimum%></div>
-<div><%=@plant.moisture_use%></div>
-<div><%=@plant.serial%></div>
-<div><%=@plant.weight%></div>
-
+<div class="min_temp"><%=@plant.temperature_minimum%></div>
+<div class="max_prec"><%=@plant.precipitation_maximum%></div>
+<div class="min_prec"><%=@plant.precipitation_minimum%></div>
+<div class="moisture"><%=@plant.moisture_use%></div>
+<div class="serial"><%=@plant.serial%></div>
+<div class="weight"><%=@plant.weight%></div>
+<div class="button"><%=button_to "Back", plants_path, method: :get%></div> 
 
     

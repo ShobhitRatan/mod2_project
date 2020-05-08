@@ -1,13 +1,15 @@
+<div class="users"> 
     <h1>Show User</h1> 
 
     <h3><%= @user.name %></h3> 
 
     <h3><%= @user.email %></h3> 
 
+    <h2>Some awesome plants that I purchased:</h2> 
     <% @user.plants.uniq.each do |plant| %> 
-        <p><%= link_to plant.name, plant_path(plant) %></p> 
+        <p><%= link_to plant.common_name, plant_path(plant) %></p> 
     <% end %> 
-
+    <h2>Some awesome tools that I purchased:</h2> 
     <% @user.tools.uniq.each do |tool| %> 
         <p><%= link_to tool.name, tool_path(tool) %></p> 
     <% end %> 
