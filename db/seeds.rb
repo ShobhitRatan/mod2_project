@@ -39,7 +39,8 @@ precipitation_minimum: 1.8,
 moisture_use: "Medium",
 serial: 104800,
 weight: 4,
-price: 29.7)
+price: 29.7,
+image:"/assets/images/pineapple.png")
 
 plant2 = Plant.create(common_name: "golden bamboo",
 scientific_name: "golden bamboo sci",
