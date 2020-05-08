@@ -1,8 +1,11 @@
 <h1>My Locations</h1>
 <%@user.locations.each do |p|%>
-    <div><%= p.apartment%> <%=p.street%>, <%=p.city%>, <%=p.state%>, <%=p.country%>, <%=p.zipcode%></div>
+    <div><%= p.apartment%> <%=p.street%>, <%=p.city%>, <%=p.state%>, <%=p.country%>, <%=p.zipcode%>
+    <%= link_to 'View', p %> 
+    </div> 
 <%end%>
     <%= button_to 'Back', plants_url ,  method: :get %> 
+    
 
 
     
