@@ -5,7 +5,7 @@
     </div> 
     <div class="field"> 
         <%= f.label :location_id %> 
-        <%= f.collection_select :location_id, @locations, :id, :city %>  
+        <%= f.collection_select :location_id, @user.locations, :id, :name %>  
     </div> 
     <div class="field"> 
         <%= f.label :user_id %> 

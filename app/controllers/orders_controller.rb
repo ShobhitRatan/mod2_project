@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
     def index 
-        @orders = Order.all 
+        @user = current_user
+        @orders = @user.orders 
     end 
 
     def show 
@@ -8,8 +9,8 @@ class OrdersController < ApplicationController
     end 
 
     def new 
-        @locations = Location.all 
-        @users = User.all 
+        @users = [] 
+        @users << current_user 
         @plants = Plant.all 
         @tools = Tool.all
         @order = Order.new 

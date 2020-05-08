@@ -5,7 +5,8 @@ class LocationsController < ApplicationController
     end 
 
     def show 
-        @location = Location.find_by(params[:id])
+        @user = current_user
+        @locations = @user.locations.find(params[:id]) 
     end
 
     def new 
