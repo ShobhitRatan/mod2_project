@@ -12,6 +12,6 @@ class SessionsController < ApplicationController
 
   def destroy 
     session.delete :user_id 
-    redirect_to plants_url  
+    redirect_to root_url  
   end 
 end
