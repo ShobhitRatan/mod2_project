@@ -7,7 +7,7 @@
 <div class="moisture"><%=@plant.moisture_use%></div>
 <div class="serial"><%=@plant.serial%></div>
 <div class="weight"><%=@plant.weight%></div>
-<img class='show-img' src="<%= @plant.image %>" alt="<%@plant.common_name%>">
+<img class='plant-img' src="<%= @plant.image %>" alt="<%@plant.common_name%>">
 <div class="button"><%=button_to "Back", plants_path, method: :get%></div> 
 
     

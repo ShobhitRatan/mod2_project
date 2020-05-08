@@ -2,5 +2,6 @@
     <h1><%= @tool.name %></h1>
     <h2><%= @tool.weight %></h2>
     <p><%= @tool.description %></p>
+    <img class='tool-img' src="<%= @tool.image %>" alt="<%@tool.name%>">
     <%=button_to "Back", tools_path, method: :get%> 
 </div> 

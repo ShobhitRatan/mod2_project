@@ -20,7 +20,7 @@ end
 
 
 
-shovel = Tool.create(name: "shovel", description: "Used for digging", weight:5, price: 67.00, image: "https://images.unsplash.com/photo-1571333461757-d924cd654164?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)")
+shovel = Tool.create(name: "shovel", description: "Used for digging", weight:5, price: 67.00, image: "https://images.unsplash.com/photo-1571333461757-d924cd654164?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
 plow = Tool.create(name: "plow", description: "Used to soil", weight: 7, price: 90.00, image: "https://images.unsplash.com/photo-1557868969-3edc1416fc53?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
 hoe = Tool.create(name: "hoe", description: "Used to till the soil", weight: 5, image: "https://images.unsplash.com/photo-1585483266669-f9ff856159ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
 watering_can = Tool.create(name: "watering can", description: "Used to water plants evenly", weight: 1, price: 16.50, image: "https://images.unsplash.com/photo-1563115843-ff8f0e0e23ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
