@@ -20,7 +20,6 @@
         <li><%=link_to "Tools", tools_path%></li>
         <li><%=link_to "Locations", locations_path%> 
         <ul><li><%= link_to "Create Location", new_location_path %></li></ul></li> 
-        <li><%= link_to "User", user_path(@user) %>
         <li><%=button_to "Cart", orders_path, method: :get%></li> 
       </ul>
     </nav>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_07_190250) do
+ActiveRecord::Schema.define(version: 2020_05_08_045054) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_05_07_190250) do
     t.float "precipitation_maximum"
     t.integer "serial"
     t.string "moisture_use"
+    t.string "image"
   end
 
   create_table "tools", force: :cascade do |t|
