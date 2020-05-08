@@ -5,10 +5,9 @@ class Plant < ApplicationRecord
     has_many :locations, through: :orders
 
     def self.create_plant(id)
-        # JSON.parse(RestClient.get("https://trefle.io/api/plants/123107/?token=Z1dsRU13S2pibDFhbFJrWm1nZTlNZz09"))
         api_beginning = "https://trefle.io/api/plants/"
         api_end = "/?token="
-        my_key = "Z1dsRU13S2pibDFhbFJrWm1nZTlNZz09"
+        my_key = ENV["APIKEY"]
 
         plant_info = JSON.parse(RestClient.get("#{api_beginning}#{id}#{api_end}#{my_key}"))
         
@@ -21,7 +20,6 @@ class Plant < ApplicationRecord
         precipitation_maximum: plant_info["main_species"]["growth"]["precipitation_maximum"]["cm"],
         moisture_use: plant_info["main_species"]["growth"]["moisture_use"],
         serial: id)
-  
     end
 
 end 
