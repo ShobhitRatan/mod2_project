@@ -20,12 +20,12 @@ end
 
 
 
-shovel = Tool.create(name: "shovel", description: "Used for digging", weight:5, price: 67.00)
-plow = Tool.create(name: "plow", description: "Used to soil", weight: 7, price: 90.00)
-hoe = Tool.create(name: "hoe", description: "Used to till the soil", weight: 5)
-watering_can = Tool.create(name: "watering can", description: "Used to water plants evenly", weight: 1, price: 16.50)
-hose = Tool.create(name: "hose", description: "used to water plants", weight: 2, price: 19.60)
-stake = Tool.create(name: "stake", description: "used for aid in vertical growth", weight: 1, price: 11.90)
+shovel = Tool.create(name: "shovel", description: "Used for digging", weight:5, price: 67.00, image: "https://images.unsplash.com/photo-1571333461757-d924cd654164?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)")
+plow = Tool.create(name: "plow", description: "Used to soil", weight: 7, price: 90.00, image: "https://images.unsplash.com/photo-1557868969-3edc1416fc53?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+hoe = Tool.create(name: "hoe", description: "Used to till the soil", weight: 5, image: "https://images.unsplash.com/photo-1585483266669-f9ff856159ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+watering_can = Tool.create(name: "watering can", description: "Used to water plants evenly", weight: 1, price: 16.50, image: "https://images.unsplash.com/photo-1563115843-ff8f0e0e23ed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+hose = Tool.create(name: "hose", description: "used to water plants", weight: 2, price: 19.60, image: "https://images.unsplash.com/photo-1588501985886-2a38c5785e68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+stake = Tool.create(name: "stake", description: "used for aid in vertical growth", weight: 1, price: 11.90, image: "https://images.unsplash.com/10/mason-jars.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
 
 
 

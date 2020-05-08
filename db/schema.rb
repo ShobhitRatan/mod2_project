@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_08_045054) do
+ActiveRecord::Schema.define(version: 2020_05_08_150626) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_05_08_045054) do
     t.integer "weight"
     t.integer "quantity"
     t.string "description"
+    t.string "image"
   end
 
   create_table "users", force: :cascade do |t|
