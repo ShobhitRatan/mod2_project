@@ -10,11 +10,13 @@ require 'rest-client'
 require 'json'
 
 
-
+User.destroy_all 
 Plant.destroy_all
 Tool.destroy_all
 
-
+barryallen = User.create(email: 'barryallen@gmail.com', name: 'Barry Allen', password: 'Pass$123')
+oliverqueen = User.create(email: 'oliverqueen@gmail.com', name: 'Oliver Queen', password: 'Pass$123')
+tonystark = User.create(email: 'tonystark@gmail.com', name: 'Tony Stark', password: 'Pass$123')
 
 
 
