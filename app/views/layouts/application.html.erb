@@ -20,11 +20,19 @@
         <li><%=link_to "Tools", tools_path%></li>
         <li><%=link_to "Locations", locations_path%> 
         <ul><li><%= link_to "Create Location", new_location_path %></li></ul></li> 
-        
         <li><%=button_to "Cart", orders_path, method: :get%></li> 
+        <% if user_signed_in? %> 
+          <li><%= link_to current_user.email, edit_user_registration_path %></li> 
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        <% else %> 
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Login", new_user_session_path %></li> 
+        <% end %>
       </ul>
     </nav>
   </header>
+    <% if(notice) %><p class="notice"><%= notice %></p><% end %> 
+    <% if(alert) %><p class="alert"><%= alert %></p><% end %> 
     <%= yield %>
   </body>
 </html>

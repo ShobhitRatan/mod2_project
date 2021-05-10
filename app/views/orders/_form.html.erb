@@ -5,11 +5,10 @@
     </div> 
     <div class="field"> 
         <%= f.label :location_id %> 
-        <%= f.collection_select :location_id, @user.locations, :id, :name %>  
+        <%= f.collection_select :location_id, current_user.locations, :id, :name %>  
     </div> 
     <div class="field"> 
-        <%= f.label :user_id %> 
-        <%= f.collection_select :user_id, @users, :id, :name %> 
+        <%= f.hidden_field :user_id, :value => current_user.id %>  
     </div> 
     <div class="field"> 
         <%= f.label :plant_id %> 
